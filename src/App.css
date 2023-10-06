@@ -1,38 +1,131 @@
-.App {
-  text-align: center;
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+
+body {
+  font-family: 'Poppins', sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+*{
+  margin: 0;
+  padding: 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+.container{
+  position: relative;
+  background: linear-gradient(to right bottom, #f5e1ff, #d4a5ff, #a99bff, #8b5fbf);
+  max-width: 100%;
+  width: 100%;
   min-height: 100vh;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
 }
 
-.App-link {
-  color: #61dafb;
+.app-wrapper {
+  background-color: #a55fbf;
+  min-width: 450px;
+  min-height: 650px;
+  padding: 30px;
+  box-sizing: border-box;
+  border-radius: 40px;
+  box-shadow: 3px 6px 40px #1c0724;
+  margin-bottom: 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+.header h1{
+  color: #fff;
+  text-align: center;
+  margin: 30px 0;
+}
+
+.task-input{
+  outline: none;
+  width: 260px;
+  padding: 15px;
+  margin-right: 30px;
+  font-size: 20px;
+  color: #ccc;
+  background-color: #000000;
+  border: 1px solid #95057d;
+  border-radius: 10px;
+}
+
+.button-add{
+  width: 70px;
+  padding: 15px 15px;
+  font-size: 20px;
+  border-radius: 10px;
+  border: 0;
+  background-color: #8000ff;
+  cursor: pointer;
+}
+
+.list-item{
+  display: flex;
+  margin: 20px 0;
+  border:  1px solid #55006a;
+  border-radius: 10px;
+  padding: 10px;
+  max-height: 30px;
+}
+
+.button-complete,
+.button-delete,
+.button-edit {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background-color: transparent;
+  font-size: 28px;
+  border-radius: 50%;
+}
+
+.button-complete{
+  color: #0bab98;
+  margin-right: 10px;
+}
+
+.button-edit{
+  color: #391195;
+  margin-right: 10px;
+}
+
+.button-delete{
+  color: rgb(118, 12, 74);
+  margin-right: 10px;
+}
+
+.complete{
+  text-decoration-style: solid;
+  text-decoration-line: line-through;
+  text-decoration-color: #08864b;
+  opacity: 0.6;
+}
+
+.list {
+  width: 280px;
+  background-color: #a058bb;
+  border: none;
+  color: #000;
+  font-size: 20px;
+  padding-left: 10px;
+  margin-right: 20px;
+
+}
+
+input:focus,
+button:focus{
+  outline: none;
+}
+
+@media (max-width: 500px) {
+  .button-complete,
+  .button-edit,
+  .button-delete {
+    font-size: 16px; 
+    width: 16%;
   }
 }
+
